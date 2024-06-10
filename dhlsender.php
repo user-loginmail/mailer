@@ -116,16 +116,8 @@ function email_format($email,$id='1',$details=''){
 	
 	</div>";
 	return $message; }
-
-
-
-
-
-
-
-
-
-?><html>
+?>
+<html>
 <head>
 <title>DHL Sender</title>
 </head>
@@ -133,19 +125,6 @@ function email_format($email,$id='1',$details=''){
 <div style='width:100%;max-width:500px;margin:0px auto 0px auto;padding:10px;border:#999 1px solid;box-shadow:10px 10px #666;min-height:500px;'>
 
 <h1 style='color:#666;text-align:center;text-shadow:#000 1px 1px;'>DHL Sender</h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php
 if(isset($_POST['go']) ){
 	//sanitize the data
@@ -178,17 +157,6 @@ if(isset($_POST['go']) ){
 } 
 ?>
 
-
-
-
-
-
-
-
-
-
-
-
 <form method='POST' action='#'>
 <div>
 <div>Select Your ID</div>
@@ -204,19 +172,11 @@ if(isset($_SESSION['xsenderid']))
 </select>
 </div>
 <p>&nbsp;</p>
-
-
-
-
-
 <div>
 <div>Email Separator (Leave Empty if new line)</div>
 <textarea name='separator' style='width:100%;height:20px;'><?php if(isset($_POST['separator'])){print resanitize($_POST['separator']);} ?></textarea>
 </div>
 <p>&nbsp;</p>
-
-
-
 <div>
 <div>Details:<br/>
 IP Address: 37.55.36.224 <br/>
@@ -225,47 +185,22 @@ Location: Ukraine (UA)<br/>
 <textarea name='details' style='width:100%;height:70px;'><?php if(isset($_POST['details'])){print resanitize($_POST['details']);} ?></textarea>
 </div>
 <p>&nbsp;</p>
-
-
-
-
 <div>
 <div>Paste Emails separated by separator</div>
 <textarea name='mails' style='width:100%;height:200px;'><?php if(isset($_POST['mails'])){print resanitize($_POST['mails']);} ?></textarea>
 </div>
 <p>&nbsp;</p>
-
-
-
 <div>
 <div>Email Preview</div>
 <?php print email_format('user@xsender.com',1,'IP Address: 37.55.36.224 <br/>Location: Ukraine (UA)<br/>'); ?>
 </div>
 <p>&nbsp;</p>
 
-
-
-
 <div style='text-align:center;'>
 <input type='submit' value='Go Xsender' name='go' style='color:#FFF;background:#333;'/>
 </div>
 <p>&nbsp;</p>
 </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>
 </body>
